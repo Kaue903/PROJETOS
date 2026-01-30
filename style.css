@@ -6,26 +6,24 @@
 }
 
 body {
-    background-color: #f2d1a8;
+    background-color: #ffffff;
     color: #3b2a1f;
 }
 
 /* ===== HEADER ===== */
 header {
-    background-color: #3b2a1f;
-    /* 1. Definimos uma altura fixa para o header não esticar */
+    background-color: #5285A4;
     height: 80px; 
-    padding: 0 40px; /* Ajustei o padding vertical para 0, pois a altura é fixa */
+    padding: 0 40px; 
     display: flex;
-    /* 2. Como a logo vai sair do fluxo (absolute), alinhamos o menu à direita */
     justify-content: flex-end; 
     align-items: center;
-    position: relative; /* Necessário para segurar a logo absoluta */
+    position: relative; 
     z-index: 50;
 }
 
 header nav a {
-    color: #e6c9a8;
+    color: #ffffff;
     text-decoration: none;
     margin: 0 15px;
     font-size: 14px;
@@ -36,26 +34,23 @@ header nav a:hover {
     text-decoration: underline;
 }
 
-/* --- LOGO FLUTUANTE --- */
+
 .logo {
-    position: absolute; /* Tira a logo do fluxo normal */
-    left: 40px;         /* Mantém a posição na esquerda */
-    top: 60%;           /* Centraliza verticalmente em relação ao topo */
-    transform: translateY(-50%); /* Garante o centro exato */
-    z-index: 51;        /* Garante que fique acima de tudo */
+    position: absolute; 
+    left: 40px;         
+    top: 60%;           
+    transform: translateY(-50%); 
+    z-index: 51;        
 }
 
 .logo img {
-    /* Agora você pode mudar este valor à vontade e o header NÃO vai mudar de tamanho */
     height: 130px; 
     width: auto;
     display: block;
 }
-/* -------------------------------------- */
 
-/* ===== HERO ===== */
 .hero {
-    height: 70vh;
+    height: 180vh;
     background: url("image.png") center/cover no-repeat;
     position: relative;
     display: flex;
@@ -71,27 +66,32 @@ header nav a:hover {
 }
 
 .hero-content {
-    position: relative;
-    max-width: 400px;
-    background-color: rgba(233, 206, 171, 0.9);
-    padding: 30px;
-    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    
+    
+    flex-direction: column;
+    align-items: center;   
+    
+    justify-content: center;
+    width: 100%;
+    z-index: 60;
+    padding-top: 20px;
 }
 
 .hero-content h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 50px;
+    margin: 0;
+    color: #dcb048;
+    text-shadow: 2px 2px 0px #000000;
+    font-weight: bold;
+    text-transform: none;
+    text-align: center;
 }
 
-.hero-content button {
-    background-color: #3b2a1f;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
-}
 
 .hero-content button:hover {
     opacity: 0.9;
@@ -101,11 +101,16 @@ header nav a:hover {
 .section {
     padding: 60px 40px;
     text-align: center;
+    font-size: 16px;
 }
 
 .section h2 {
-    margin-bottom: 40px;
-    font-size: 24px;
+    font-size: 28px;
+    color: #dcb048;
+    text-shadow: 2px 2px 0px #000000; 
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: none; 
 }
 
 .cards {
@@ -115,10 +120,10 @@ header nav a:hover {
 }
 
 .card {
-    background-color: #3b2a1f;
+    background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
-    color: #f2d1a8;
+    color: #000000;
 }
 
 .card img {
@@ -137,7 +142,7 @@ header nav a:hover {
 }
 
 .cta button {
-    background-color: #2f7d32;
+    background-color: #1815bc;
     color: #fff;
     border: none;
     padding: 12px 25px;
@@ -152,7 +157,7 @@ header nav a:hover {
 
 /* ===== CALENDÁRIO ===== */
 .calendar-section {
-    background-color: #b5895a;
+    background-color: #B5D3FF;
     padding: 60px 40px;
     text-align: center;
 }
@@ -175,18 +180,18 @@ header nav a:hover {
 
 .calendar th,
 .calendar td {
-    border: 1px solid #3b2a1f;
+    border: 1px solid #1f2a3b;
     padding: 8px 12px;
     font-size: 14px;
 }
 
 .calendar th {
-    background: #3b2a1f;
-    color: #fff;
+    background: #000000;
+    color: #DFAD4B;
 }
 
 .highlight {
-    background: #ffcc80;
+    background: #dc8400;
     font-weight: bold;
 }
 
@@ -210,32 +215,11 @@ header nav a:hover {
 .green  { background: #3fbf4a; color: #fff; }
 .pink   { background: #d81b60; color: #fff; }
 
-/* ===== PRINCÍPIOS ===== */
-.principles {
-    background: #5b3a1d;
-    padding: 60px 40px;
-    color: #f2d1a8;
-    text-align: center;
-}
-
-.principles-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.principle {
-    background: #f2d1a8;
-    color: #3b2a1f;
-    padding: 25px;
-    border-radius: 10px;
-}
 
 /* ===== FOOTER ===== */
 footer {
-    background: #3b2a1f;
-    color: #f2d1a8;
+    background: #3B89FF;
+    color: #ffffff;
     padding: 40px;
 }
 
@@ -261,5 +245,168 @@ footer {
 
     .hero-content {
         max-width: 100%;
+    }
+}
+
+.calendar-section {
+    background-color: #bfdce5;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Georgia", serif;
+}
+
+.calendar-title {
+    font-size: 28px;
+    color: #dcb048;
+    text-shadow: 2px 2px 0px #000000; 
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: none; 
+}
+
+/* O Cartão Dourado */
+.calendar-card {
+    background-color: #dcb048; 
+    border: 2px solid #bfa065;
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.calendar-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 15px; 
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+.calendar-header-row span {
+    flex: 1;
+    text-align: center;
+}
+
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 15px; 
+    justify-items: center;
+    margin-bottom: 30px;
+}
+
+
+.day {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 12px; 
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+.day.yellow { background-color: #ffff00; }
+.day.orange { background-color: #ff9900; }
+.day.red { background-color: #ff0000; color: black; }
+.day.green { background-color: #00ff2a; }
+.day.empty { background: transparent; box-shadow: none; cursor: default; }
+
+
+.day:hover:not(.empty) {
+    transform: scale(1.1);
+    border: 2px solid #fff;
+}
+
+
+.calendar-legend {
+    border: 1px solid #a68b4f;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot.yellow { background-color: #ffff00; }
+.dot.orange { background-color: #ff9900; }
+.dot.red { background-color: #ff0000; }
+.dot.green { background-color: #00ff2a; }
+
+.benefits-list {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.icon {
+    width: 40px;
+    height: 35px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+
+@media (max-width: 500px) {
+    .calendar-grid {
+        gap: 8px; 
+    }
+    .day {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+    .calendar-header-row {
+        font-size: 12px;
+        padding: 10px;
     }
 }
