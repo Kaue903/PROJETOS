@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Georgia", serif;
+}
+
+body {
+    background-color: #f2d1a8;
+    color: #3b2a1f;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #3b2a1f;
+    /* 1. Definimos uma altura fixa para o header não esticar */
+    height: 80px; 
+    padding: 0 40px; /* Ajustei o padding vertical para 0, pois a altura é fixa */
+    display: flex;
+    /* 2. Como a logo vai sair do fluxo (absolute), alinhamos o menu à direita */
+    justify-content: flex-end; 
+    align-items: center;
+    position: relative; /* Necessário para segurar a logo absoluta */
+    z-index: 50;
+}
+
+header nav a {
+    color: #e6c9a8;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- LOGO FLUTUANTE --- */
+.logo {
+    position: absolute; /* Tira a logo do fluxo normal */
+    left: 40px;         /* Mantém a posição na esquerda */
+    top: 60%;           /* Centraliza verticalmente em relação ao topo */
+    transform: translateY(-50%); /* Garante o centro exato */
+    z-index: 51;        /* Garante que fique acima de tudo */
+}
+
+.logo img {
+    /* Agora você pode mudar este valor à vontade e o header NÃO vai mudar de tamanho */
+    height: 130px; 
+    width: auto;
+    display: block;
+}
+/* -------------------------------------- */
+
+/* ===== HERO ===== */
+.hero {
+    height: 70vh;
+    background: url("image.png") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 400px;
+    background-color: rgba(233, 206, 171, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hero-content button {
+    background-color: #3b2a1f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero-content button:hover {
+    opacity: 0.9;
+}
+
+/* ===== ATRAÇÕES ===== */
+.section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #3b2a1f;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #f2d1a8;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card p {
+    padding: 15px;
+    font-size: 16px;
+}
+
+.cta {
+    margin-top: 40px;
+}
+
+.cta button {
+    background-color: #2f7d32;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.cta button:hover {
+    background-color: #256428;
+}
+
+/* ===== CALENDÁRIO ===== */
+.calendar-section {
+    background-color: #b5895a;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.calendar-sub {
+    margin-bottom: 30px;
+}
+
+.calendar-wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.calendar {
+    border-collapse: collapse;
+    background: #f6e2c8;
+}
+
+.calendar th,
+.calendar td {
+    border: 1px solid #3b2a1f;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.calendar th {
+    background: #3b2a1f;
+    color: #fff;
+}
+
+.highlight {
+    background: #ffcc80;
+    font-weight: bold;
+}
+
+.open {
+    background: #9bd18b;
+}
+
+.calendar-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info {
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.yellow { background: #d8d36f; }
+.green  { background: #3fbf4a; color: #fff; }
+.pink   { background: #d81b60; color: #fff; }
+
+/* ===== PRINCÍPIOS ===== */
+.principles {
+    background: #5b3a1d;
+    padding: 60px 40px;
+    color: #f2d1a8;
+    text-align: center;
+}
+
+.principles-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.principle {
+    background: #f2d1a8;
+    color: #3b2a1f;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #3b2a1f;
+    color: #f2d1a8;
+    padding: 40px;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px;
+        height: auto;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+}
