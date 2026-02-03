@@ -5,9 +5,23 @@
     font-family: "Georgia", serif;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     background-color: #ffffff;
     color: #3b2a1f;
+    display: flex;
+    flex-direction: column;
+}
+
+body > section, body > header {
+    flex-shrink: 0;
+}
+
+footer {
+    margin-top: auto;
 }
 
 /* ===== HEADER ===== */
@@ -50,7 +64,7 @@ header nav a:hover {
 }
 
 .hero {
-    height: 180vh;
+    height: 135vh;
     background: url("image.png") center/cover no-repeat;
     position: relative;
     display: flex;
@@ -157,7 +171,7 @@ header nav a:hover {
 
 /* ===== CALENDÁRIO ===== */
 .calendar-section {
-    background-color: #B5D3FF;
+    background-color: #105cce;
     padding: 60px 40px;
     text-align: center;
 }
@@ -216,6 +230,8 @@ header nav a:hover {
 .pink   { background: #d81b60; color: #fff; }
 
 
+
+
 /* ===== FOOTER ===== */
 footer {
     background: #3B89FF;
@@ -249,7 +265,7 @@ footer {
 }
 
 .calendar-section {
-    background-color: #bfdce5;
+    background-color: #1289ad;
     padding: 60px 20px;
     display: flex;
     flex-direction: column;
@@ -409,4 +425,25 @@ footer {
         font-size: 12px;
         padding: 10px;
     }
+}
+
+/* Blog Section */
+.blog-section {
+    text-align: center;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+.blog-section h2 {
+    font-size: 28px;
+    color: #dcb048;
+    text-shadow: 2px 2px 0px #000000; 
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: none; 
+}
+.blog-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 40px 60px 40px;
 }
