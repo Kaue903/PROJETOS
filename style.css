@@ -115,7 +115,7 @@ header nav a:hover {
 .section {
     padding: 60px 40px;
     text-align: center;
-    font-size: 16px;
+    background-color: #def6fa;
 }
 
 .section h2 {
@@ -232,26 +232,68 @@ header nav a:hover {
 
 
 
-/* ===== FOOTER ===== */
+/* ===== ATUALIZAÇÃO DO FOOTER ===== */
 footer {
     background: #3B89FF;
     color: #ffffff;
-    padding: 40px;
+    padding: 60px 40px 20px 40px; 
 }
 
 .footer-columns {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
+    margin-bottom: 40px; 
+}
+
+.footer-columns h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-columns p {
+    line-height: 1.6;
+}
+
+/* Estilo dos Ícones Sociais */
+.social-icons {
+    display: flex;
+    gap: 15px; 
+    align-items: center;
+}
+
+.social-icons a img {
+    width: 30px;  
+    height: 30px;
+    transition: transform 0.2s ease;
+    filter: brightness(0) invert(1); 
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2); 
+}
+
+.footer-logo-container {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); 
+    padding-top: 40px;
+}
+
+.footer-logo {
+    height: 100px; 
+    width: auto;
+    opacity: 0.9;
 }
 
 .footer-copy {
     text-align: center;
-    margin-top: 30px;
-    font-size: 13px;
-    opacity: 0.8;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 10px;
 }
-
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
     .hero {
@@ -285,7 +327,7 @@ footer {
 /* O Cartão Dourado */
 .calendar-card {
     background-color: #dcb048; 
-    border: 2px solid #bfa065;
+    border: 2px solid #000000;
     border-radius: 20px;
     padding: 30px;
     width: 100%;
@@ -299,9 +341,9 @@ footer {
     align-items: center;
     font-size: 18px;
     font-weight: bold;
-    color: #000;
+    color: #000000;
     border: 1px solid #000;
-    border-radius: 15px; 
+    border-radius: 50px; 
     padding: 10px 20px;
     margin-bottom: 20px;
     background: transparent;
@@ -316,7 +358,7 @@ footer {
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr); 
-    gap: 15px; 
+    gap: 21px; 
     justify-items: center;
     margin-bottom: 30px;
 }
@@ -432,7 +474,9 @@ footer {
     text-align: center;
     font-size: 16px;
     background-color: #f9f9f9;
+    padding-top: 40px;
 }
+
 .blog-section h2 {
     font-size: 28px;
     color: #dcb048;
@@ -441,9 +485,58 @@ footer {
     font-weight: bold;
     text-transform: none; 
 }
+
 .blog-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     padding: 0 40px 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o grid na tela */
+}
+
+/* Estilo do Card do Blog */
+.blog-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
+    height: 100%; 
+}
+
+/* === AQUI ESTÁ A CORREÇÃO DAS IMAGENS === */
+.blog-card img {
+    width: 100%;       
+    height: 200px;    
+    object-fit: cover; 
+}
+
+/* Tipografia dentro do Card */
+.blog-card h3 {
+    padding: 20px 20px 10px;
+    font-size: 18px;
+    color: #3b2a1f;
+}
+
+.blog-card p {
+    padding: 0 20px 20px;
+    color: #555;
+    font-size: 14px;
+    flex-grow: 1; 
+}
+
+.blog-card a {
+    display: inline-block;
+    margin: 0 20px 20px;
+    color: #105cce;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.blog-card a:hover {
+    text-decoration: underline;
+    color: #0b3d8a;
 }
